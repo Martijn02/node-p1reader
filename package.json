@@ -1,0 +1,31 @@
+{
+  "name": "p1reader",
+  "version": "0.1.0",
+  "description": "Nodejs package for reading and interpreting P1 data packages sent by a smart energy meter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Martijn02/node-p1reader.git"
+  },
+  "keywords": [
+    "p1",
+    "serial",
+    "smart",
+    "energy",
+    "meter",
+    "electricity",
+    "gas"
+  ],
+  "author": "Martijn van Zal <martijn@vanzal.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Martijn02/node-p1reader/issues"
+  },
+  "homepage": "https://github.com/Martijn02/node-p1reader",
+  "dependencies": {
+    "serialport": "^1.4.10"
+  }
+}
