@@ -26,6 +26,6 @@
   },
   "homepage": "https://github.com/Martijn02/node-p1reader",
   "dependencies": {
-    "serialport": "^1.4.10"
+    "serialport": ""
   }
 }
