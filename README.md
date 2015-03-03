@@ -43,6 +43,8 @@ The reader emits the following events:
 * `reading` - For every received message (should come in every 10 seconds)
 * `electicity` -  for every electricity reading (every 10 secs)
 * `gas` - For every gas reading (my meter reports a new gas reading every hour)
+* `close` - When the serial connection gets closed for some reason
+* `error` - When the serial connection emits an error
 
 An event for electricity gets emitted with the following information:
 
