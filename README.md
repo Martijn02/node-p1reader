@@ -44,3 +44,24 @@ The reader emits the following events:
 * `electicity` -  for every electricity reading (every 10 secs)
 * `gas` - For every gas reading (my meter reports a new gas reading every hour)
 
+An event for electricity gets emitted with the following information:
+
+```js
+{ date: Tue Mar 03 2015 16:31:23 GMT+0100 (CET),
+  t1used: 3231.628,
+  t2used: 3038.542,
+  t1returned: 0,
+  t2returned: 0,
+  currentTarif: 2,
+  currentlyUsing: 140,
+  currentlyReturning: 0 }
+```
+
+In my case tarif 2 is during peak times, tarif 1 is my off-peak (evenings, nights and weekends) usage.
+
+While an event for a new gas meter reading contains the following information:
+
+```js
+{ date: Fri Apr 03 2015 16:00:00 GMT+0200 (CEST),
+  used: '02066.247' }
+```

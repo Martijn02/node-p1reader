@@ -1,6 +1,6 @@
 {
   "name": "p1reader",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Nodejs package for reading and interpreting P1 data packages sent by a smart energy meter",
   "main": "index.js",
   "scripts": {
