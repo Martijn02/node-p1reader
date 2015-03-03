@@ -67,3 +67,14 @@ While an event for a new gas meter reading contains the following information:
 { date: Fri Apr 03 2015 16:00:00 GMT+0200 (CEST),
   used: '02066.247' }
 ```
+
+A `reading` event contains both gas and electricity readings in a single package
+
+More Information
+----------------
+
+Here are some sites I used to gather all required information in order to make this module (and build a required serial->usb converter)
+
+* [maartendamen.com](http://www.maartendamen.com/2012/04/new-smart-meter-installed-iskra-me382-and-landis-gyr-gasmeter-e06140/) Explanation on how to convert a FTDI cable to read a smart meter
+* [gejanssen.com](http://gejanssen.com/howto/Slimme-meter-uitlezen/) - Dutch explanation about reading a smart meter
+* [node-serialport](https://github.com/voodootikigod/node-serialport) - Explains how to get nodejs running on a Raspberry Pi
