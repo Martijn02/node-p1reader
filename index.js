@@ -29,6 +29,8 @@ P1Reader.prototype.open = function(callback) {
             callback && callback(error);
         } else {
             serial.on('data', this.handlePackage.bind(this));
+            serial.on('close', this.handleClose.bind(this));
+            serial.on('error', this.handleError.bind(this));
             callback && callback(null);
         }
     }.bind(this));
@@ -36,6 +38,13 @@ P1Reader.prototype.open = function(callback) {
 
 P1Reader.prototype.close = function(callback) {
     serial.close(callback);
+}
+
+P1Reader.prototype.handleClose = function(data) {
+	this.emit('close', data);
+}
+P1Reader.prototype.handleError = function(data) {
+	this.emit('error', data);
 }
 
 P1Reader.prototype.handlePackage = function(data) {
