@@ -98,7 +98,9 @@ P1Reader.prototype.parsePackage = function(rawData) {
                 data.electricity.currentlyReturning = parseInt(res[2].replace('.', '') + '0');
                 break;
             case '24.3.0':
-                data.gas.date = new Date("20" + res[2].substring(0,2), res[2].substring(2,4), res[2].substring(4,6), res[2].substring(6,8), res[2].substring(8,10), res[2].substring(10,12), 0);
+                var dateString = "20" + res[2].substring(0,2) + "-" + res[2].substring(2,4) + "-" + res[2].substring(4,6) + " ";
+                    dateString += res[2].substring(6,8) + ":" + res[2].substring(8,10) + ":" + res[2].substring(10,12);
+                data.gas.date = new Date(dateString);
                 data.gas.used = lines[l+1].replace(/[\(\)]/g, '').trim();
                 break;
         }
