@@ -66,7 +66,7 @@ P1Reader.prototype.parsePackage = function(rawData) {
     data.electricity.date = new Date();
     var lines = rawData.split("\r\n");
     // Not a full package (not enough lines)
-    if(lines.length < 19) {
+    if(lines.length < 18) {
         return null;
     }
 
